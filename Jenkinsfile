@@ -9,7 +9,7 @@ pipeline {
     }
     
     stage("Build the docker image){
-          steps {
+          }
             
     
     
