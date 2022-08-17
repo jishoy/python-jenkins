@@ -10,6 +10,7 @@ pipeline {
         sh 'ls'
       }
     }
+    
                 
     stage("Building the Docker Image") {
       steps {
@@ -17,6 +18,7 @@ pipeline {
           dockerImage = docker.build image + ":$BUILD_NUMBER"
         }
       }
+    }
     
   }
 }
