@@ -7,10 +7,7 @@ pipeline {
         sh 'ls'
       }
     }
-    
-    stage("Build the docker image){
-          }
-            
+                
     
     
     
