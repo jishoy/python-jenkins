@@ -1,8 +1,9 @@
 pipeline {
   agent any
-  enviornment {
+  environment  {
     image = "jishoy"
   }
+  
   stages {
     stage("Clone the repository") {
       steps {
