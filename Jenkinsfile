@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  enviornment {
+    image = "jishoy"
+  }
   stages {
     stage("Clone the repository") {
       steps {
@@ -8,8 +11,12 @@ pipeline {
       }
     }
                 
-    
-    
+    stage("Building the Docker Image") {
+      steps {
+        script {
+          dockerImage = docker.build image + ":$BUILD_NUMBER"
+        }
+      }
     
   }
 }
